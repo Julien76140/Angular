@@ -12,7 +12,8 @@ export class AddPoneyComponent implements OnInit {
 
   newPony: Pony= new Pony();
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+  }
 
   ngOnInit(): void {
 

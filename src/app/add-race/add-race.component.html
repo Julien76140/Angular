@@ -1,0 +1,15 @@
+<h1>Ajouter une course </h1>
+
+<h1 *ngIf="add">Entrer un nouvelle courses</h1>
+<h1 *ngIf="!add">Mettre à jour votre nouvelle courses</h1>
+<form (ngSubmit)="onSubmit()">
+  Lieu <input type="text" id="location" required [(ngModel)]="model.location" name="location" /> Date
+
+  <input type="text" id="date" required [(ngModel)]="model.date" name="date" />
+  <div *ngFor="let p of allPonies; let i=index">
+    {{p.name}} <input type="checkbox" name="{{p.name}}" (change)="poniesBool[i] = !poniesBool[i]">
+  </div>
+  <button *ngIf="add" type="submit">Enregistrer</button>
+  <button *ngIf="!add" type="submit">Mettre à jour</button>
+
+</form>
