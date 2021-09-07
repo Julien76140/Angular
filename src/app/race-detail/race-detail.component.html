@@ -1,4 +1,4 @@
- {{race.location}} - {{race.date | date: 'dd/MM/yy'}}
+ {{race.location| locationPipe}} - {{race.date | date: 'dd/MM/yy'}}
 
   <ul>
     <li *ngFor="let v of race.ponies">

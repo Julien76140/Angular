@@ -6,6 +6,7 @@ import { PoniesComponent } from './ponies/ponies.component';
 import { RacesComponent } from './races/races.component';
 import { PonyDetailComponent } from './pony-detail/pony-detail.component';
 import { RaceDetailComponent } from './race-detail/race-detail.component';
+import { LocationPipePipe } from './location-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { RaceDetailComponent } from './race-detail/race-detail.component';
     PoniesComponent,
     RacesComponent,
     PonyDetailComponent,
-    RaceDetailComponent
+    RaceDetailComponent,
+    LocationPipePipe
   ],
   imports: [
     BrowserModule
