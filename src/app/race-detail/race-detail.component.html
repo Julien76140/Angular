@@ -1,5 +1,7 @@
+ {{race.location}} - {{race.date | date: 'dd/MM/yy'}}
+
   <ul>
     <li *ngFor="let v of race.ponies">
-      {{ v.name }}
+      {{ v.name }} - {{ v.color}} - {{ v.age }}
     </li>
   </ul>

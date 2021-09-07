@@ -2,7 +2,6 @@
 
 <ul>
   <li *ngFor="let p of ponies let i = index">
-    {{i}} : {{p.name}}
     <app-pony-detail [pony]="p"></app-pony-detail>
   </li>
 </ul>
