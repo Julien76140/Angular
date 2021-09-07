@@ -1,8 +1,9 @@
-<p>races works!</p>
-
+<p *ngIf="races.length ==0">Pas de cours</p>
+<p *ngIf="races.length >0">Course en cours</p>
 <ul>
   <li *ngFor="let k of races; let u = index">
      {{u}} : {{k.date}} - {{k.location}}
-  </li>
+    <app-race-detail [race]="k"></app-race-detail>
 
+  </li>
 </ul>

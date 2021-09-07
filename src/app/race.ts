@@ -5,7 +5,7 @@ export class Race {
   id_race: number;
   location: string;
   date: Date;
-  ponies: Array<Pony>
+  ponies: Array<Pony>;
 
     constructor(id_race?:number,location?:string,date?:Date) {
 

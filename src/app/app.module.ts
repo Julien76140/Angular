@@ -4,12 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { PoniesComponent } from './ponies/ponies.component';
 import { RacesComponent } from './races/races.component';
+import { PonyDetailComponent } from './pony-detail/pony-detail.component';
+import { RaceDetailComponent } from './race-detail/race-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PoniesComponent,
-    RacesComponent
+    RacesComponent,
+    PonyDetailComponent,
+    RaceDetailComponent
   ],
   imports: [
     BrowserModule
