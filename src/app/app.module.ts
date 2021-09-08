@@ -14,6 +14,9 @@ import { AddRaceComponent } from './add-race/add-race.component';
 import { ReactiveFormsModule} from "@angular/forms";
 import { AddPonyReactComponent } from './add-pony-react/add-pony-react.component';
 import { HttpClientModule } from "@angular/common/http";
+import {PickListModule} from "primeng/picklist";
+import {ButtonModule} from "primeng/button";
+import {InputTextModule} from "primeng/inputtext";
 
 const ROUTES: Routes=[
   {path:'',component: PoniesComponent},
@@ -42,7 +45,10 @@ const ROUTES: Routes=[
     FormsModule,
     RouterModule.forRoot(ROUTES),
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    PickListModule,
+    ButtonModule,
+    InputTextModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

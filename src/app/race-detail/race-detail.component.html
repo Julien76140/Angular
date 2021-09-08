@@ -1,9 +1,8 @@
- {{race.location| locationPipe}} - {{race.date | date: 'dd/MM/yy'}}
+{{race.location| locationPipe}} - {{race.date | date: 'dd/MM/yy'}}
 
   <ul>
     <li *ngFor="let v of race.ponies">
       {{ v.name }} - {{ v.color}} - {{ v.age }}
     </li>
-    <a routerLink="/update-race/{{ race.id }}">Mettre à jour la course </a>
-
   </ul>
+  <a routerLink="/update-race/{{ race.id }}">Mettre à jour la course </a>

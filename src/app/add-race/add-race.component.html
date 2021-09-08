@@ -1,14 +1,43 @@
-
 <h1 *ngIf="add">Entrer un nouvelle courses</h1>
 <h1 *ngIf="!add">Mettre à jour votre nouvelle courses</h1>
 <form (ngSubmit)="onSubmit()">
-  Lieu <input type="text" id="location" required [(ngModel)]="model.location" name="location" /> Date
 
-  <input type="text" id="date" required [(ngModel)]="model.date" name="date" />
-  <div *ngFor="let p of allPonies; let i=index;">
-    {{p.name}} <input type="checkbox" name="{{p.name}}" (change)="poniesBool[i] = !poniesBool[i]">
-  </div>
-  <button *ngIf="add" type="submit">Enregistrer</button>
-  <button *ngIf="!add" type="submit">Mettre à jour</button>
+  <span class="p-float-label">
+    <input id="float-input" type="text" pInputText  required [(ngModel)]="model.location" name="location" >
+    <label for="float-input">Lieu</label>
+  </span>
+  <br>
 
+  <span class="p-float-label">
+    <input id="float-input-2" type="text" pInputText  required [(ngModel)]="model.date" name="date" >
+    <label for="float-input-2">Date</label>
+  </span><br>
+
+
+
+  <p-pickList [source]="allPonies" [target]="targetPonies" sourceHeader="Available" targetHeader="Selected" [dragdrop]="true"
+              [responsive]="true" [sourceStyle]="{'height':'30rem'}" [targetStyle]="{'height':'30rem'}" filterBy="name"
+              sourceFilterPlaceholder="Search by name" targetFilterPlaceholder="Search by name">
+    <ng-template let-product pTemplate="item" >
+
+      <div class="product-item" *ngFor="let p of allPonies; let i=index;">
+        <div class="image-container">
+          {{p.name}} <input type="checkbox" name="{{p.name}}" (change)="poniesBool[i] = !poniesBool[i]">
+        </div>
+        <div class="product-list-detail">
+          <h5 class="p-mb-2">test</h5>
+          <i class="pi pi-tag product-category-icon"></i>
+          <span class="product-category">dddd</span>
+        </div>
+        <div class="product-list-action">
+          <h6 class="p-mb-2">0000</h6>
+          <span></span>
+        </div>
+      </div>
+    </ng-template>
+  </p-pickList>
+
+  <button *ngIf="add" type="submit" pButton label="PrimeNG">Enregistrer</button>
+  <button *ngIf="!add" type="submit" pButton label="PrimeNG">Mettre à jour</button>
 </form>
+

@@ -18,8 +18,12 @@ export class AddRaceComponent implements OnInit {
   poniesBool = Array<boolean>();
   allPonies: Pony[]= [];
   add: boolean = true;
+  targetPonies: Pony[]=[];
 
   constructor(private router: Router,private route: ActivatedRoute,private raceService: RaceService,private ponyService: PonyService) {
+
+    this.targetPonies=[];
+
   }
 
   ngOnInit(): void {
@@ -30,8 +34,6 @@ export class AddRaceComponent implements OnInit {
     if(this.route.snapshot.paramMap.get('id')==null){
       this.add=true;
     }else{
-
-
       this.add=false;
       let str =this.route.snapshot.paramMap.get('id')
       const id_race= parseInt(str == null ? "0" : str,0 );
@@ -62,7 +64,7 @@ export class AddRaceComponent implements OnInit {
 
     if(this.add) {
       //RACES.push(this.model);
-      this.raceService.addRace(this.model);
+      //this.raceService.addRace(this.model);
     }
 
 
