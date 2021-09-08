@@ -3,6 +3,7 @@ import {FormBuilder, Validators} from "@angular/forms";
 import {Pony} from "../pony";
 import {PONIES} from "../mock-ponies";
 import {Router} from "@angular/router";
+import {PonyService} from "../pony.service";
 
 @Component({
   selector: 'app-add-pony-react',
@@ -17,14 +18,15 @@ export class AddPonyReactComponent implements OnInit {
     age: [0,Validators.required],
 
   })
-  constructor(private fb :FormBuilder,private router:Router) { }
+  constructor(private fb :FormBuilder,private router:Router,private ponyService: PonyService) { }
 
   ngOnInit(): void {
   }
 
   onSubmit() :void{
     let res: Pony=this.ponyForm.value;
-    PONIES.push(res);
+    //PONIES.push(res);
+    this.ponyService.addPony(res);
     this.router.navigate(['']);
   }
 

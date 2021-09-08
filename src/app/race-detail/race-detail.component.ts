@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Race} from "../race";
+import {RaceService} from "../race.service";
 
 @Component({
   selector: 'app-race-detail',
@@ -10,7 +11,7 @@ export class RaceDetailComponent implements OnInit {
 
   @Input() race: Race= new Race();
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }

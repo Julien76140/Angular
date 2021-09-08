@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Race } from '../race';
-import { RACES } from '../mock-races';
+import { RaceService } from "../race.service";
 
 @Component({
   selector: 'app-races',
@@ -9,15 +9,13 @@ import { RACES } from '../mock-races';
 })
 export class RacesComponent implements OnInit {
 
-  races: Race[];
+  races: Race[]= [];
 
-  constructor() {
-    this.races=RACES;
-
+  constructor(private raceService: RaceService) {
+    this.raceService.getAllRace().subscribe(p =>this.races =p );
   }
 
   ngOnInit(): void {
-
 
   }
 
