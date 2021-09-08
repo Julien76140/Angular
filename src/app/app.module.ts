@@ -11,11 +11,13 @@ import { LocationPipePipe } from './location-pipe.pipe';
 import { AddPoneyComponent } from './add-poney/add-poney.component';
 import { MenuComponent } from './menu/menu.component';
 import { AddRaceComponent } from './add-race/add-race.component';
+import { ReactiveFormsModule} from "@angular/forms";
+import { AddPonyReactComponent } from './add-pony-react/add-pony-react.component';
 
 const ROUTES: Routes=[
   {path:'',component: PoniesComponent},
   {path:'races',component: RacesComponent},
-  {path:'add-pony',component: AddPoneyComponent},
+  {path:'add-pony',component: AddPonyReactComponent},
   {path:'add-race',component: AddRaceComponent},
   {path:'update-pony/:id',component: AddPoneyComponent},
   {path:'update-race/:id',component: AddRaceComponent},
@@ -31,12 +33,14 @@ const ROUTES: Routes=[
     LocationPipePipe,
     AddPoneyComponent,
     MenuComponent,
-    AddRaceComponent
+    AddRaceComponent,
+    AddPonyReactComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(ROUTES),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
