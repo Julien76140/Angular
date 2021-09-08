@@ -13,6 +13,7 @@ import { MenuComponent } from './menu/menu.component';
 import { AddRaceComponent } from './add-race/add-race.component';
 import { ReactiveFormsModule} from "@angular/forms";
 import { AddPonyReactComponent } from './add-pony-react/add-pony-react.component';
+import { HttpClientModule } from "@angular/common/http";
 
 const ROUTES: Routes=[
   {path:'',component: PoniesComponent},
@@ -40,7 +41,8 @@ const ROUTES: Routes=[
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(ROUTES),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
