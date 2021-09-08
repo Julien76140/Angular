@@ -4,4 +4,6 @@
     <li *ngFor="let v of race.ponies">
       {{ v.name }} - {{ v.color}} - {{ v.age }}
     </li>
+    <a routerLink="/update-race/{{ race.id_race }}">Mettre à jour la course </a>
+
   </ul>

@@ -1,4 +1,5 @@
-<h1>Ajouter un Poney </h1>
+<h1 *ngIf="add">Ajouter un Poney </h1>
+<h1 *ngIf="!add">Mettre un jour les poneys</h1>
 
 <form (ngSubmit)="onSubmit()">
   <label>Nom</label>
