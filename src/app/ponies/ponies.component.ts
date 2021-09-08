@@ -17,6 +17,7 @@ export class PoniesComponent implements OnInit {
   constructor(private ponyService: PonyService,private primengConfig: PrimeNGConfig) {
 
     this.ponyService.getAllPonies().subscribe(p =>this.ponies =p );
+
   }
 
   ngOnInit(): void {

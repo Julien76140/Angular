@@ -33,7 +33,9 @@ export class AddRaceComponent implements OnInit {
     //test l'url si ajout ou pas
     if(this.route.snapshot.paramMap.get('id')==null){
       this.add=true;
+
     }else{
+
       this.add=false;
       let str =this.route.snapshot.paramMap.get('id')
       const id_race= parseInt(str == null ? "0" : str,0 );

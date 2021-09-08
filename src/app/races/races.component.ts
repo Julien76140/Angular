@@ -12,10 +12,15 @@ export class RacesComponent implements OnInit {
   races: Race[]= [];
 
   constructor(private raceService: RaceService) {
-    this.raceService.getAllRace().subscribe(p =>this.races =p );
+
+    this.raceService.getAllRace().subscribe(p =>this.races =p);
+
+
   }
 
   ngOnInit(): void {
+
+
 
   }
 

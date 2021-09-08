@@ -1,7 +1,23 @@
-<p *ngIf="races.length ==0">Pas de cours</p>
-<p *ngIf="races.length >0">Course en cours</p>
-<ul>
-  <li *ngFor="let k of races; let u = index">
-    <app-race-detail [race]="k"></app-race-detail>
-  </li>
-</ul>
+
+<h1 *ngIf="races.length==0">Aucune cours disponible</h1>
+
+<p-orderList *ngIf="races.length>0" [value]="races" [listStyle]="{'max-height':'30rem'}" header="Liste des courses en cours" [dragdrop]="true">
+
+  <ng-template let-race pTemplate="item">
+    <div class="product-item">
+      <div class="image-container">
+      </div>
+      <div class="product-list-detail">
+        <h5 class="p-mb-2">Lieu: {{race.location}}</h5>
+        <h5 class="p-mb-2">Date: {{race.date}}</h5>
+        <h5 class="p-mb-2">Participants:
+          <ul *ngFor="let p of race.ponies ">
+            <li>{{ p.name }} <button pButton type="button" label="Mettre à jour ce poney " class="p-button-help" routerLink="/update-pony/{{ p.id }}"></button></li>
+          </ul>
+          {{race.age}}</h5>
+        <p-button label="Mettre à jour la course" routerLink="update-pony/{{ race.id }}" ></p-button>
+      </div>
+    </div>
+  </ng-template>
+</p-orderList>
+

@@ -17,6 +17,10 @@ import { HttpClientModule } from "@angular/common/http";
 import {PickListModule} from "primeng/picklist";
 import {ButtonModule} from "primeng/button";
 import {InputTextModule} from "primeng/inputtext";
+import {CalendarModule} from "primeng/calendar";
+import {OrderListModule} from "primeng/orderlist";
+import {MegaMenuModule} from "primeng/megamenu";
+import {TabMenuModule} from "primeng/tabmenu";
 
 const ROUTES: Routes=[
   {path:'',component: PoniesComponent},
@@ -49,6 +53,10 @@ const ROUTES: Routes=[
     PickListModule,
     ButtonModule,
     InputTextModule,
+    CalendarModule,
+    OrderListModule,
+    MegaMenuModule,
+    TabMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

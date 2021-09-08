@@ -1,8 +1,14 @@
-<p>ponies works!</p>
-
-<ul>
-  <li *ngFor="let p of ponies let i = index">
-    <app-pony-detail [pony]="p"></app-pony-detail>
-  </li>
-</ul>
-
+ <p-orderList [value]="ponies" [listStyle]="{'max-height':'30rem'}" header="Liste des Poneys" [dragdrop]="true">
+    <ng-template let-ponies pTemplate="item">
+      <div class="product-item">
+        <div class="image-container">
+        </div>
+        <div class="product-list-detail">
+          <h5 class="p-mb-2">Nom: {{ponies.name}}</h5>
+          <h5 class="p-mb-2">Couleur: {{ponies.color}}</h5>
+          <h5 class="p-mb-2">Age: {{ponies.age}}</h5>
+          <p-button label="Mettre à jour le poney" routerLink="update-pony/{{ ponies.id }}" ></p-button>
+        </div>
+      </div>
+    </ng-template>
+  </p-orderList>
