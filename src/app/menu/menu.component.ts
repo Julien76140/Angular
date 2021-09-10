@@ -34,6 +34,13 @@ export class MenuComponent implements OnInit {
 
     this.activeItem = this.items[0];
 
+    if(sessionStorage.setItem('userId',this.username) !=null){
+      this.connexion=true;
+    }else{
+      this.connexion=false;
+
+    }
+
   }
 
   onSubmit():void{
