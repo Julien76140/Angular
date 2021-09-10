@@ -66,10 +66,8 @@ export class AddRaceComponent implements OnInit {
 
     if(this.add) {
       //RACES.push(this.model);
-      //this.raceService.addRace(this.model);
+      this.raceService.addRace(this.model);
     }
-
-
 
     this.router.navigate(['/races']);
 

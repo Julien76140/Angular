@@ -21,14 +21,16 @@ import {CalendarModule} from "primeng/calendar";
 import {OrderListModule} from "primeng/orderlist";
 import {MegaMenuModule} from "primeng/megamenu";
 import {TabMenuModule} from "primeng/tabmenu";
+import {InputNumberModule} from "primeng/inputnumber";
+import {UserGuard} from "./user.guard";
 
 const ROUTES: Routes=[
   {path:'',component: PoniesComponent},
   {path:'races',component: RacesComponent},
-  {path:'add-pony',component: AddPonyReactComponent},
-  {path:'add-race',component: AddRaceComponent},
-  {path:'update-pony/:id',component: AddPoneyComponent},
-  {path:'update-race/:id',component: AddRaceComponent},
+  {path:'add-pony',component: AddPonyReactComponent,canActivate: [UserGuard]},
+  {path:'add-race',component: AddRaceComponent,canActivate: [UserGuard]},
+  {path:'update-pony/:id',component: AddPoneyComponent,canActivate: [UserGuard]},
+  {path:'update-race/:id',component: AddRaceComponent,canActivate: [UserGuard]},
 ];
 
 @NgModule({
@@ -57,6 +59,7 @@ const ROUTES: Routes=[
     OrderListModule,
     MegaMenuModule,
     TabMenuModule,
+    InputNumberModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

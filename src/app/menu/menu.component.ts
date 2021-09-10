@@ -10,6 +10,8 @@ export class MenuComponent implements OnInit {
 
   items: MenuItem[]=[];
   activeItem: MenuItem={};
+  username: string="";
+  connexion: boolean=true;
 
   constructor() { }
 
@@ -32,6 +34,18 @@ export class MenuComponent implements OnInit {
 
     this.activeItem = this.items[0];
 
+  }
+
+  onSubmit():void{
+
+    if(this.connexion){
+      sessionStorage.setItem('userId',this.username);
+      this.connexion=false;
+    }else{
+      sessionStorage.removeItem('userId');
+      this.username="";
+      this.connexion=true;
+    }
   }
 
 }

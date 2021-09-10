@@ -1,0 +1,17 @@
+.h1-add-pony{
+  color: #9C27B0;
+  text-align: center;
+}
+form{
+  display: block;
+  margin: auto;
+  width: 200px;
+}
+form span{
+  margin-top: 25px;
+
+}
+.save-button{
+  display: block;
+  margin: 25px auto 0 auto;
+}

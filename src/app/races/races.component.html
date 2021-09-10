@@ -12,10 +12,10 @@
         <h5 class="p-mb-2">Date: {{race.date}}</h5>
         <h5 class="p-mb-2">Participants:
           <ul *ngFor="let p of race.ponies ">
-            <li>{{ p.name }} <button pButton type="button" label="Mettre à jour ce poney " class="p-button-help" routerLink="/update-pony/{{ p.id }}"></button></li>
+            <li>{{ p.name }} <button class="update-button" pButton type="button" label="Mettre à jour ce poney " class="p-button-help" routerLink="/update-pony/{{ p.id }}"></button></li>
           </ul>
           {{race.age}}</h5>
-        <p-button label="Mettre à jour la course" routerLink="/update-race/{{ race.id }}" ></p-button>
+        <p-button class="update-button" label="Mettre à jour la course" routerLink="/update-race/{{ race.id }}" ></p-button>
       </div>
     </div>
   </ng-template>

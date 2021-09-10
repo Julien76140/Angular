@@ -1,4 +1,4 @@
-<h1 *ngIf="add">Entrer un nouvelle courses</h1>
+<h1 *ngIf="add">Entrer un nouvelle course</h1>
 <h1 *ngIf="!add">Mettre à jour votre course</h1>
 <form (ngSubmit)="onSubmit()">
 
@@ -7,23 +7,13 @@
     <label for="float-input">Lieu</label>
   </span>
 
-  <h5>Inline</h5>
-  <p-calendar [(ngModel)]="model.date" [inline]="true" [showWeek]="true"></p-calendar>
+  <label for="float-input-2">Date</label>
+  <input id="float-input-2" type="date" pInputText  required [(ngModel)]="model.date" name="date" >
 
-
-  <p-pickList [source]="allPonies" [target]="targetPonies" sourceHeader="Poney Disponible" targetHeader="Poney sélectionné" [dragdrop]="true"
-              [responsive]="true" [sourceStyle]="{'height':'30rem'}" [targetStyle]="{'height':'30rem'}" >
-    <ng-template let-product pTemplate="item" >
-      <div class="product-item" >
-        <div class="image-container" *ngFor="let p of allPonies; let i=index;">
-           <input type="checkbox" name="{{p.name}}" (change)="poniesBool[i] = !poniesBool[i]">{{p.name}}
-        </div>
-        <hr>
-      </div>
-    </ng-template>
-  </p-pickList>
-
-  <button *ngIf="add" type="submit" pButton label="PrimeNG">Enregistrer</button>
-  <button *ngIf="!add" type="submit" pButton label="PrimeNG">Mettre à jour</button>
+  <div *ngFor="let p of allPonies;let i = index;">
+    <input type="checkbox" name="{{p.name}}" (change)="poniesBool[i] = !poniesBool[i]">{{p.name}}
+  </div>
+  <button *ngIf="add" type="submit" pButton label="Enregistrer"></button>
+  <button *ngIf="!add" type="submit" pButton label="Mettre à jour"></button>
 </form>
 

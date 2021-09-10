@@ -1,4 +1,30 @@
+h1{
+  color: #2196F3;
+}
 
 .p-float-label {
   margin-top: 75px;
+}
+
+form{
+  display: block;
+  margin: auto;
+  width: 200px;
+}
+
+form div{
+
+  margin-top: 25px;
+  margin-bottom: 25px;
+
+}
+form button{
+  display: block;
+  margin: auto;
+}
+form span{
+  margin-bottom: 25px;
+}
+h1{
+  text-align: center;
 }

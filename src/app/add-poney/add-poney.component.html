@@ -1,12 +1,21 @@
-<h1 *ngIf="add">Ajouter un Poney </h1>
-<h1 *ngIf="!add">Mettre un jour les poneys</h1>
+<h1 *ngIf="add" class="h1-add-pony">Ajouter un Poney </h1>
+<h1 *ngIf="!add" class="h1-add-pony">Mettre un jour les poneys</h1>
 
 <form (ngSubmit)="onSubmit()">
-  <label>Nom</label>
-  <input type="text" id="name" name="name" [(ngModel)]="newPony.name">
-  <label>Couleur</label>
-  <input type="text" id="color" name="color" [(ngModel)]="newPony.color">
+
+    <span class="p-float-label">
+    <input id="float-input" type="text" pInputText name="name" [(ngModel)]="newPony.name">
+    <label for="float-input">Username</label>
+  </span>
+  <span class="p-float-label">
+    <input id="float-input-2" type="text" pInputText  name="color"  [(ngModel)]="newPony.color">
+    <label for="float-input-2">Couleur</label>
+  </span>
   <label>Age</label>
-  <input type="number" id="age" name="age" [(ngModel)]="newPony.age">
-  <button type="submit">Enregistrer</button>
+  <p-inputNumber id="age" name="age" [min]="0" [max]="100" [(ngModel)]="newPony.age"></p-inputNumber>
+
+  <button type="submit" class="save-button" pButton label="Enregistrer"></button>
 </form>
+
+
+
