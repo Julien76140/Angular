@@ -15,13 +15,10 @@
             <ul>
               <li>{{ p.name }}</li>
             </ul>
-            <a class="update-button" routerLink="/update-race/{{ p.id }}"  >
-              <p-button class="update-button button-poney" label="Mettre à jour ce poney" ></p-button>
-            </a>
+            <a class="update-button" href="/update-race/{{ p.id }}"  >Mettre à jour ce poney</a>
           </div>
           {{race.age}}</h5>
-        <a class="update-button" routerLink="/update-race/{{ race.id }}"  >
-          <p-button class="update-button" label="Mettre à jour la course" ></p-button>
+        <a class="update-button" href="/update-race/{{ race.id }}"  >Mettre à jour la course
         </a>
       </div>
     </div>

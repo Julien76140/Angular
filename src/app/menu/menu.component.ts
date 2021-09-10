@@ -22,7 +22,7 @@ export class MenuComponent implements OnInit {
         label: 'Poneys', icon: '',routerLink:'/'
       },
       {
-        label: 'Courses', icon: '',routerLink:'races'
+        label: 'Courses', icon: '',routerLink:'races',id: 'course-menu'
       },
       {
         label: 'Ajouter un poney', icon: '',routerLink:'add-pony'
@@ -33,13 +33,6 @@ export class MenuComponent implements OnInit {
     ];
 
     this.activeItem = this.items[0];
-
-    if(sessionStorage.setItem('userId',this.username) !=null){
-      this.connexion=true;
-    }else{
-      this.connexion=false;
-
-    }
 
   }
 

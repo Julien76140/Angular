@@ -1,8 +1,8 @@
 <div class="menu">
   <p-tabMenu [model]="items"></p-tabMenu>
   <form (ngSubmit)="onSubmit()">
-    <input *ngIf="connexion" id="user-input" type="text" name="user" [(ngModel)]="username" />
-    <p-button *ngIf="connexion " type="submit">Connexion</p-button>
-    <p-button *ngIf="!connexion" type="submit">Déconnexion</p-button>
+    <input *ngIf="connexion" id="user-input" type="text" name="user" [(ngModel)]="username"  />
+    <p-button *ngIf="connexion " type="submit" id="send-input">Connexion</p-button>
+    <p-button *ngIf="!connexion" type="submit" id="send-input">Déconnexion</p-button>
   </form>
 </div>
