@@ -1,14 +1,14 @@
  <p-orderList [value]="ponies" [listStyle]="{'max-height':'30rem'}" header="Liste des Poneys" [dragdrop]="true">
     <ng-template let-ponies pTemplate="item">
       <div class="product-item">
-        <div class="image-container">
-        </div>
         <div class="product-list-detail">
           <h5 class="p-mb-2">Nom: {{ponies.name}}</h5>
           <h5 class="p-mb-2">Couleur: {{ponies.color}}</h5>
           <h5 class="p-mb-2">Age: {{ponies.age}}</h5>
-          <p-button class="update-button" label="Mettre à jour le poney" routerLink="update-pony/{{ ponies.id }}" ></p-button>
         </div>
+        <a class="update-button" routerLink="update-pony/{{ ponies.id }}" >
+          <p-button class="update-button" label="Mettre à jour le poney"></p-button>
+        </a>
       </div>
     </ng-template>
   </p-orderList>

@@ -10,4 +10,7 @@ body{
 a{
   text-decoration: none;
 }
-
+.update-button{
+  position: relative;
+  z-index: 9999;
+}

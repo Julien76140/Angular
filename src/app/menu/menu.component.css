@@ -6,3 +6,8 @@
   margin-top: 25px;
   margin-bottom: 25px;
 }
+form{
+  display: block;
+  margin: auto;
+  width: 200px;
+}
